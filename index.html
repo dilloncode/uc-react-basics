@@ -17,9 +17,17 @@
   <script crossorigin
           src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
   <script type="text/javascript">
-    const button = React.createElement('button', { type: 'button' }, 'Save');
+    const articleHeading = React.createElement('h2', null, 'My first blog post');
 
-    ReactDOM.render(button, document.getElementById('root'));
+    const paragraph = React.createElement('p', { className: 'text' }, 'this is the content of my post.');
+
+    const article = React.createElement('article', null, articleHeading, paragraph);
+
+    const mainHeading = React.createElement('h1', null, 'My Blog');
+
+    const main = React.createElement('main', { id: 'main' }, mainHeading, article);
+
+    ReactDOM.render(main, document.getElementById('root'));
   </script>
 </body>
 
