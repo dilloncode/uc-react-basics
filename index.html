@@ -11,6 +11,11 @@
 </head>
 
 <body>
+  <label for="testInput">This is a test input</label>
+  <input id="testInput"
+         maxlength="10"
+         readonly
+         class="input-style" />
   <div id="root"></div>
   <script crossorigin
           src="https://unpkg.com/react@16/umd/react.development.js"></script>
@@ -18,21 +23,13 @@
           src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   <script type="text/babel">
-    const main = (
+    const input = (
       <React.Fragment>
-        <main id="main">
-          <h1>My Blog</h1>
-          <article>
-            <h2>My first blog post </h2>
-            <p className="text">This is the content of my post.</p>
-          </article>
-        </main>
-        <footer>
-          <span>Some footer text</span>
-        </footer>
+      <label htmlFor="jsxInput">This is a test input</label>
+      <input id="jsxInput" maxLength="10" readOnly className="input-style" />
       </React.Fragment>
     );
-    ReactDOM.render(main, document.getElementById('root'));
+    ReactDOM.render(input, document.getElementById('root'));
   </script>
 </body>
 
