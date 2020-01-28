@@ -13,6 +13,7 @@
 <body>
   <label for="testInput">This is a test input</label>
   <input id="testInput"
+         aria-label="this is a test input"
          maxlength="10"
          readonly
          class="input-style" />
@@ -25,8 +26,8 @@
   <script type="text/babel">
     const input = (
       <React.Fragment>
-      <label htmlFor="jsxInput">This is a test input</label>
-      <input id="jsxInput" maxLength="10" readOnly className="input-style" />
+        <label htmlFor="jsxInput">This is a test input</label>
+        <input id="jsxInput" maxLength="10" readOnly className="input-style" aria-label="this is a test input" />
       </React.Fragment>
     );
     ReactDOM.render(input, document.getElementById('root'));
